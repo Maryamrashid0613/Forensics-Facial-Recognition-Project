@@ -15,16 +15,16 @@ for filename in os.listdir(folder_path):
             print(f"❌ Could not load {filename}")
             continue
 
-        # 1. Print image details
+        # Print image details
         print(f"📂 {filename} -> Shape: {img.shape}")  # (height, width, channels)
 
-        # 2. Convert to grayscale
+        # Convert to grayscale
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-        # 3. Show original and grayscale
+        # Show original and grayscale
         cv2.imshow("Original", img)
         cv2.imshow("Grayscale", gray)
 
-        cv2.waitKey(1000)  # wait 1 second
+        cv2.waitKey(1000)  # wait 1 second before showing the next picture
 
 cv2.destroyAllWindows()
